@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Web</title>
+        <link rel="stylesheet" href="Mystyle.css">
+    </head>
+    <body>
+        <!----------HEADER SECTION---------->
+        <header>
+            <a href="#" class="logo">LOGO</a>
+            <ul>
+                <li><a href="#banner">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </header>
+        <!----------HOMEPAGE BANNER SECTION---------->
+        <section class="banner" id="banner">
+            <script type="text/javascript">
+                window.addEventListener("scroll", function(){
+                    var header = document.querySelector("header");
+                    header.classList.toggle("sticky", window.scrollY > 0);
+                })
+            </script>
+        </section>
+        <!----------ABOUT SECTION---------->
+        <section id="about">
+            <br><br><br>
+            <div class="about">
+                <h1>ABOUT ME</h1>
+                <br><br><br>
+                <div class="image">
+                        <img src="portrait.jpg">
+                        <p>Lorem ipsum dolor sit amet
+                             consectetur, adipisicing
+                              elit. Laudantium mollitia nesciunt
+                                deleniti labore natus quo ullam quisquam, sunt, magnam, vel molestias accusamus 
+                                 facilis eos consequatur maiores 
+                                 libero. Optio, asperiores 
+                                 repudiandae. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, atque veritatis, molestiae a reiciendis odit, nemo sequi excepturi esse enim temporibus ex saepe illum? Error omnis officia cumque totam officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis vel, eos ut excepturi corrupti.
+                                </p>
+                </div>
+                <br><br><b></b>
+                <div class="skills-btn">
+                     <button href="#home">SHOW MY SKILLS</button>
+                </div>
+            </div>
+        </section>
+        <!----------SKILLS SECTION---------->
+        <section id="skills">
+            <br><br><br>
+            <div class="services">
+                <div class="title">
+                    <h2>MY SERVICES</h2>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
