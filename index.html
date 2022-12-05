@@ -22,6 +22,13 @@
                     var header = document.querySelector("header");
                     header.classList.toggle("sticky", window.scrollY > 0);
                 })
+                function validateForm(){
+                    let x = document.forms["contactForm"]["fname"].value;
+                    if (x == ""){
+                        alert("First Name Must Be Filled");
+                        return false;
+                    }
+                }
             </script>
         </section>
         <!----------ABOUT SECTION---------->
@@ -43,7 +50,7 @@
                 </div>
                 <br><br><b></b>
                 <div class="skills-btn">
-                     <button href="#home">SHOW MY SKILLS</button>
+                    <a class="button-contact" href="#contact-me">CONTACT ME</a>
                 </div>
             </div>
         </section>
@@ -61,7 +68,7 @@
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis incidunt, unde laborum mollitia quisquam animi molestias maiores praesentium consectetur, non architecto dolore. Iure libero sequi nam, explicabo soluta magni doloribus repellat quam nostrum blanditiis eligendi quidem eum exercitationem ad impedit!
                                 </p>
                                 <p style="text-align: center;">
-                                    <a class="button" href="#">HIRE ME</a>
+                                    <a class="button" href="#contact-me">HIRE ME</a>
                                 </p>
                             </div>
                         </div>
@@ -74,7 +81,7 @@
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis incidunt, unde laborum mollitia quisquam animi molestias maiores praesentium consectetur, non architecto dolore. Iure libero sequi nam, explicabo soluta magni doloribus repellat quam nostrum blanditiis eligendi quidem eum exercitationem ad impedit!
                                 </p>
                                 <p style="text-align: center;">
-                                    <a class="button" href="#">HIRE ME</a>
+                                    <a class="button" href="#contact-me">HIRE ME</a>
                                 </p>
                             </div>
                         </div>
@@ -87,7 +94,7 @@
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis incidunt, unde laborum mollitia quisquam animi molestias maiores praesentium consectetur, non architecto dolore. Iure libero sequi nam, explicabo soluta magni doloribus repellat quam nostrum blanditiis eligendi quidem eum exercitationem ad impedit!
                                 </p>
                                 <p style="text-align: center;">
-                                    <a class="button" href="#">HIRE ME</a>
+                                    <a class="button" href="#contact-me">HIRE ME</a>
                                 </p>
                             </div>
                         </div>
@@ -101,16 +108,40 @@
                 <div class="card">
                     <div class="contact-ways">
                         <p>Ways To Contact Me</p>
-                        <a class="button-contact" href="#">CONTACT ME</a>
+                        <p>+123 456 7890</p>
+                        <a class="button-contact" href="#contact-form">CONTACT ME</a>
                     </div>
                 </div>
+            </div>
+            <div class="contact-form" id="contact-form">
+                <form name="contactForm" onsubmit="return validateForm()">
+                    <label for="firstname">First Name :</label>
+                    <input type="text" name="fname"><br><br>
+                    <label for="middlename">Middle Name :</label>
+                    <input type="text"><br><br>
+                    <label for="lastname">Last Name :</label>
+                    <input type="text"><br><br>
+                    <label for="comment">Comment :</label>
+                    <textarea name="comment" id="txtcomment" cols="30" rows="10">Please enter comment about your work</textarea>
+                    <br><br>
+                    <label for="email">E-mail :</label>
+                    <input type="email"><br><br>
+                    <label for="number">Phone Number :</label>
+                    <input type="number">
+                    <br><br>
+                    <input type="submit">
+                    <input type="reset">
+                </form>
             </div>
         </section>
         <!------------FOOTER SECTION----------->
         <footer>
-            <p>LOREM IPSUM</p>
+            <p>SOCIALS LINKS</p>
             <div class="social">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="facebook.com"><img src="icons\facebook.svg" alt="facebook"></a>
+                <a href="whatsapp.com"><img src="icons\whatsapp.svg" alt="facebook"></a>
+                <a href="twitter.com"><img src="icons\twitter.svg" alt="facebook"></a>
+                <a href="instagrame.com"><img src="icons\instagram.svg" alt="facebook"></a>
             </div>
         </footer>
     </body>
